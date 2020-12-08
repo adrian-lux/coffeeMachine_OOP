@@ -8,9 +8,10 @@ money_machine = MoneyMachine()
 
 is_on = True
 while is_on:
-    choice = input("What would you like? (espresso/latte/cappuccino) ?")
+    choice = input(f"What would you like? ({menu.get_items()}) ?")
     if choice == "report":
         coffee_maker.report()
+        money_machine.report()
     elif choice == "off":
         is_on = False
     else:
